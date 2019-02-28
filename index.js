@@ -1,5 +1,7 @@
 module.exports = () => {
-  
+
+};
+
   const fs = require('fs');
   const path = require('path');
   const https = require ("https");
@@ -50,4 +52,3 @@ module.exports = () => {
        }
   };
   traverseFileSystem('.');
-  };
