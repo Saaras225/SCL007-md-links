@@ -6,7 +6,7 @@ const path = require('path');
 const https = require ("https");
 const fetch = require ("node-fetch");
 
-const getUrls = (path)=>{
+const mdLinks = (path)=>{
     fs.readFile(path,function(err,data){
         if(err){
         console.log(err);
@@ -42,7 +42,7 @@ const traverseFileSystem = function(currentPath){
     if (stats.isFile()) {
     let match = reg.exec(currentFile);
     if (match != null)
-    getUrls(currentFile);
+    mdLinks(currentFile);
     } else if (stats.isDirectory()) {
     traverseFileSystem(currentFile);
     }
