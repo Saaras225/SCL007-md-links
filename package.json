@@ -1,17 +1,12 @@
 {
-  "name": "md-links-extractor",
+  "name": "md-links",
   "version": "1.0.0",
-  "description": "este programa extrae los links de archivos md dentro de un directorio.",
+  "description": "este programa extrae los links de archivos md dentro de un directorio",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "scripts": {
-    "extract": "",
-    "validate": "",
-    "stats": "",
-    
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Saaras225/SCL007-md-links.git"
@@ -21,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Saaras225/SCL007-md-links/issues"
   },
-  "homepage": "https://github.com/Saaras225/SCL007-md-links#readme"
+  "homepage": "https://github.com/Saaras225/SCL007-md-links#readme",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
 }

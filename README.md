@@ -23,36 +23,19 @@ Para poder instalar el paquete debes colocar en tu terminal:
 
 ```sh
 
-npm install md-Links-extractor
+npm install -g
 ```
 
 ## comandos a utilizar
 
-- `Extracción Links`: Para comenzar con la extracción de links de tu directorio debes colocar el comando: 
-
-```sh
-extract
-```
-
 - `Validación`: Te permite validar el estatus de funcionamiento (conexión) de los links con el comando:
 
 ```sh
-validate
+--validate
 ```
 
 -  `Estadistica`: Podras obtener la cantidad (número) de links que funcionan junto con la cantidad de links roto, usabdo el comanto: 
 
 ```sh
-stats
-```
-
-
-
-
-
-
-```sh
-$ md-links ./some/example.md --stats
-Total: 3
-Unique: 3
+--stats
 ```
