@@ -73,24 +73,26 @@ function getLinks(file, validate){
 
 //ESTO HACE LA RECURSION
 const traverseFileSystem = function(currentPath, validate){
-    let reg = new RegExp(/.+\.md/gi);
-    let files = fs.readdirSync(currentPath);
     let filesPromises = []
-    // recorro los elementos del directorio
-    for (let i in files) {
-        let currentFile = currentPath + '/' + files[i];
-        let stats = fs.statSync(currentFile);
-        //chequeo si el elemento es un archivo o directorio
-        if (stats.isFile()) {
-            // chequeo si es un archivo .md
-            let match = reg.exec(currentFile);
-            if (match != null)
-                // Esto es un archivo .md debo buscar los links
-                filesPromises.push(getLinks(currentFile, validate));
-        } else if (stats.isDirectory()) {
-            // si es directorio me vuelvo a llamar recursivamente
-            filesPromises = filesPromises.concat(traverseFileSystem(currentFile));
-            
+    if(currentPath!=undefined){
+        let reg = new RegExp(/.+\.md/gi);
+        let files = fs.readdirSync(currentPath);
+        // recorro los elementos del directorio
+        for (let i in files) {
+            let currentFile = currentPath + '/' + files[i];
+            let stats = fs.statSync(currentFile);
+            //chequeo si el elemento es un archivo o directorio
+            if (stats.isFile()) {
+                // chequeo si es un archivo .md
+                let match = reg.exec(currentFile);
+                if (match != null)
+                    // Esto es un archivo .md debo buscar los links
+                    filesPromises.push(getLinks(currentFile, validate));
+            } else if (stats.isDirectory()) {
+                // si es directorio me vuelvo a llamar recursivamente
+                filesPromises = filesPromises.concat(traverseFileSystem(currentFile));
+                
+            }
         }
     }
     return filesPromises;   

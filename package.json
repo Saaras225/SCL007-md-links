@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Saaras225/SCL007-md-links#readme",
   "dependencies": {
     "node-fetch": "^2.3.0"
+  },
+  "bin": {
+    "md-links": "./index.js"
   }
 }

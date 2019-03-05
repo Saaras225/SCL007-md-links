@@ -1,8 +1,8 @@
-const mdLinks = require('../');
+const mdLinks = require('../index.js');
 
 
-describe('mdLinks', () => {
-
+describe('traverseFileSystem', () => {
+  
   it('should...', () => {
     console.log('FIX ME!');
   });
