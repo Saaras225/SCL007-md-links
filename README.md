@@ -34,7 +34,7 @@ npm install -g
 --validate
 ```
 
--  `Estadistica`: Podras obtener la cantidad (número) de links que funcionan junto con la cantidad de links roto, usabdo el comanto: 
+-  `Estadistica`: Podras obtener la cantidad (número) de links que funcionan junto con la cantidad de links roto, usando el comando: 
 
 ```sh
 --stats
